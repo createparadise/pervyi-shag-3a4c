@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Сидор, ваш первый шаг · Create Paradise Now</title>
+<title>Сидор, заказы для твоих станков · Create Paradise Now</title>
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="googlebot" content="noindex, nofollow">
-<meta name="description" content="День 1 протокола «Идеальное тело за 10 минут»: одна сессия 9:30 без зала и снаряжения. И как работает партнёрство.">
+<meta name="description" content="Итоги разговора 20.11: где ИИ может найти заказы для металлообработки, партнёрство без вложений и три шага.">
 <meta name="theme-color" content="#ffffff">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Сидор, ваш первый шаг">
-<meta property="og:description" content="День 1 · одна сессия 9:30 — без зала, снаряжения и покупок.">
-<meta property="og:image" content="https://createparadise.github.io/pervyi-shag-3a4c/og.jpg">
+<meta property="og:title" content="Сидор, заказы для твоих станков">
+<meta property="og:description" content="Итоги разговора 20.11: 5 способов найти заказы, партнёрство без вложений, три шага.">
+<meta property="og:image" content="https://createparadise.github.io/pervyi-shag-3a4c/og-2011.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="ru_RU">
@@ -19,7 +19,7 @@
 <style>
 :root{
   --ink:#191207; --ink2:#3a2f22; --muted:#6e6152; --line:#e9e2d6; --paper:#ffffff; --ivory:#fbf8f2;
-  --gold:#a0762f; --gold2:#c9a15d; --ok:#1f7a5c;
+  --gold:#a0762f; --gold2:#c9a15d; --ok:#1f7a5c; --warn:#b4532a;
   --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
   --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   --mono:ui-monospace,"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
@@ -44,6 +44,19 @@ p{margin:0 0 12px}
 .muted{color:var(--muted)}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px;padding:0;list-style:none}
 .chips li{font:600 13px/1 var(--mono);padding:9px 12px;border:1px solid var(--line);border-radius:999px;background:var(--ivory)}
+/* recap */
+.recap{margin:16px 0 4px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,#fffdf9,#f8f2e7);padding:20px 20px 6px;box-shadow:0 18px 40px -28px rgba(25,18,7,.35)}
+.quote{font:italic 600 clamp(20px,3.6vw,24px)/1.4 var(--serif);color:var(--ink);margin:4px 0 14px;padding-left:16px;border-left:3px solid var(--gold2);text-wrap:balance}
+.facts{margin:0;padding:0;list-style:none}
+.facts li{display:grid;grid-template-columns:132px 1fr;gap:14px;padding:12px 0;border-top:1px dashed var(--line);font-size:16px;color:var(--ink2)}
+.facts .k{font:700 12px/1.6 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--gold);padding-top:2px}
+/* 3 steps */
+.steps3{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:12px;counter-reset:st}
+.steps3 li{counter-increment:st;position:relative;border:1px solid var(--line);border-radius:16px;padding:16px 18px 18px 64px;background:#fff}
+.steps3 li::before{content:counter(st);position:absolute;left:18px;top:15px;width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font:700 15px/1 var(--mono);background:var(--ink);color:#fff}
+.steps3 b{display:block;font-size:17.5px;line-height:1.35;margin:4px 0}
+.steps3 p{margin:0 0 12px;color:var(--ink2);font-size:16px}
+.steps3 .btn{padding:12px 16px;min-height:46px;font-size:15px}
 /* timeline */
 .tl{list-style:none;margin:18px 0 8px;padding:0}
 .tl li{display:grid;grid-template-columns:62px 1fr;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line)}
@@ -80,10 +93,32 @@ ol.sw li{counter-increment:s;position:relative;padding:10px 0 10px 44px;border-b
 ol.sw li:last-child{border-bottom:0}
 ol.sw li::before{content:counter(s);position:absolute;left:0;top:10px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:700 14px/1 var(--mono);background:var(--ivory);border:1px solid var(--line);color:var(--gold)}
 .note{border-left:3px solid var(--gold2);background:var(--ivory);padding:14px 16px;border-radius:0 12px 12px 0;margin:16px 0;font-size:15.5px;color:var(--ink2)}
+.note.warn{border-left-color:var(--warn);background:#fff6f0}
 .min{border-radius:16px;padding:18px;background:var(--ink);color:#fff;margin:18px 0 0}
 .min .label{color:var(--gold2)}
 .min p{margin:8px 0 14px;font-size:18px}
 .min .btn{background:#fff;color:var(--ink)}
+/* debt path */
+.path{list-style:none;margin:16px 0 6px;padding:0;counter-reset:p}
+.path li{counter-increment:p;position:relative;padding:4px 0 18px 52px}
+.path li::before{content:counter(p);position:absolute;left:0;top:2px;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;font:700 15px/1 var(--mono);background:var(--ivory);border:1px solid var(--gold2);color:var(--gold)}
+.path li::after{content:"";position:absolute;left:17px;top:40px;bottom:2px;width:1px;background:var(--line)}
+.path li:last-child::after{display:none}
+.path b{display:block;font-size:17.5px;margin-bottom:2px}
+.path span{color:var(--ink2);font-size:16px}
+/* checklist */
+.check{list-style:none;margin:12px 0 0;padding:0}
+.check li{position:relative;padding:10px 0 10px 36px;border-bottom:1px dashed var(--line);font-size:16px;color:var(--ink2)}
+.check li:last-child{border-bottom:0}
+.check li::before{content:"";position:absolute;left:0;top:13px;width:20px;height:20px;border-radius:6px;border:1.5px solid var(--gold2);background:#fff}
+/* details */
+details{border:1px solid var(--line);border-radius:16px;background:#fff;margin:14px 0 0}
+details summary{cursor:pointer;list-style:none;padding:16px 18px;font:700 16px/1.3 var(--sans);display:flex;justify-content:space-between;align-items:center;gap:12px}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";font:400 24px/1 var(--mono);color:var(--gold);transition:transform .4s var(--spring)}
+details[open] summary::after{transform:rotate(45deg)}
+details .inner{padding:0 18px 16px}
+details .cards{margin-top:0}
 /* prompt */
 .prompt{position:relative;border:1px solid var(--line);border-radius:16px;background:var(--ivory);padding:16px 16px 70px;font:15px/1.6 var(--mono);color:var(--ink2);white-space:pre-wrap;word-break:break-word}
 .prompt button{position:absolute;right:12px;bottom:12px;padding:12px 16px;min-height:44px;font-size:14px}
@@ -100,6 +135,7 @@ ol.steps li{margin:0 0 8px}
 .cta .btn{width:100%;font-size:18px;min-height:60px}
 .small{font-size:14px;color:var(--muted)}
 footer{padding:26px 0 48px;border-top:1px solid var(--line);font-size:13.5px;color:var(--muted)}
+#shagi,#zakazy,#voprosy,#dolg,#partner,#telo,#timer{scroll-margin-top:16px}
 .reveal{opacity:0;transform:translateY(14px);transition:opacity .9s var(--spring),transform .9s var(--spring)}
 .reveal.in{opacity:1;transform:none}
 @media (max-width:560px){
@@ -107,8 +143,10 @@ footer{padding:26px 0 48px;border-top:1px solid var(--line);font-size:13.5px;col
   header.hero{padding-top:40px}
   .rates{grid-template-columns:1fr}
   .tl li{grid-template-columns:54px 1fr;gap:10px}
+  .facts li{grid-template-columns:1fr;gap:2px}
+  .steps3 li{padding-left:58px}
 }
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}button,.btn{transition:none}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}button,.btn{transition:none}details summary::after{transition:none}}
 </style>
 </head>
 <body>
@@ -116,26 +154,136 @@ footer{padding:26px 0 48px;border-top:1px solid var(--line);font-size:13.5px;col
 <main class="wrap">
 
 <header class="hero">
-  <div class="label">Create Paradise Now · лично для вас</div>
-  <h1>Сидор, ваш первый шаг</h1>
-  <p class="lead">Один бесплатный шаг из моей книги «Идеальное тело за&nbsp;10&nbsp;минут в&nbsp;день». Без зала, без снаряжения и без покупок — в&nbsp;любой комнате, сегодня.</p>
+  <div class="label">Create Paradise Now · лично для тебя · 20.11</div>
+  <h1>Сидор, заказы для твоих станков</h1>
+  <p class="lead">Итоги нашего разговора, как обещал: где ИИ может найти заказы для металлообработки, как работает партнёрство без вложений и&nbsp;что нужно по&nbsp;долгу.</p>
   <p class="sign">— Максим Лагошин</p>
   <ul class="chips" aria-label="Коротко">
-    <li>9:30 мин</li><li>3 упражнения</li><li>0 ₽</li><li>кровать + пол</li>
+    <li>B2B-клиенты</li><li>тендеры</li><li>сайт и бот</li><li>0 вложений</li>
   </ul>
 </header>
 
-<section id="day1" class="reveal">
-  <div class="label">День 1</div>
-  <h2>Одна сессия 9:30</h2>
-  <p>7:30 чистой работы — около десяти минут от старта до душа. Три упражнения, один таймер, ноль подсчёта повторов. Телу нужен не подвиг, а точный сигнал.</p>
+<section id="itogi" class="reveal">
+  <div class="label">Итоги разговора · 20.11</div>
+  <h2>Что я услышал</h2>
+  <div class="recap">
+    <p class="quote">«Как в этой ситуации использовать ИИ, чтобы развить бизнес? Можно его как-то применить — и&nbsp;если да, то как?»</p>
+    <ul class="facts">
+      <li><span class="k">Ситуация</span><div>Металлообработка в&nbsp;Москве, около полугода почти без заказов — и&nbsp;так у&nbsp;всех знакомых в&nbsp;гражданском секторе. Проекты у&nbsp;заказчиков есть, но бюджеты отложены; звонят в&nbsp;основном частники с&nbsp;мелкой работой.</div></li>
+      <li><span class="k">Учитываем</span><div>Все деньги — в&nbsp;станках, оборудование с&nbsp;места не&nbsp;сдвинешь. ИИ ты пока не&nbsp;пользовался — значит, начинаем с&nbsp;простого и&nbsp;без вложений.</div></li>
+      <li><span class="k">Договорились</span><div>Я присылаю варианты и&nbsp;вопросы, ты отвечаешь в&nbsp;Telegram, когда удобно. Меньше разговоров, больше реальных дел.</div></li>
+    </ul>
+  </div>
+</section>
+
+<section id="shagi" class="reveal">
+  <div class="label">3 шага</div>
+  <h2>Всё, что нужно сделать</h2>
+  <ol class="steps3">
+    <li><b>Ответь на&nbsp;5&nbsp;вопросов про производство</b><p>Можно голосовыми. По ответам скажу, какие способы сработают именно у&nbsp;тебя, а&nbsp;если не&nbsp;сработают — скажу прямо.</p><a class="btn ghost" href="#voprosy">К вопросам ↓</a></li>
+    <li><b>Пришли документы по&nbsp;долгу</b><p>Переписку с&nbsp;датами и&nbsp;всё, что есть из&nbsp;списка ниже. Это срочно: общий срок исковой давности — три года.</p><a class="btn ghost" href="#dolg">Список документов ↓</a></li>
+    <li><b>Вспомни 1–2 знакомых с&nbsp;бизнесом</b><p>Кому нужны клиенты, сайт или бот. Просто познакомь — пусть напишут «я&nbsp;от&nbsp;Сидора». Без вложений и&nbsp;обязательств.</p><a class="btn ghost" href="#partner">Как работает партнёрство ↓</a></li>
+  </ol>
+</section>
+
+<section id="zakazy" class="reveal">
+  <div class="label">Заказы для металлообработки</div>
+  <h2>Что можно сделать, не&nbsp;трогая станки</h2>
+  <p>К железу ИИ не&nbsp;применишь — он работает вокруг него: находит заказчиков, первым отвечает и&nbsp;быстро считает. Вот пять способов.</p>
+  <div class="cards">
+    <div class="card"><div class="n">Способ 1 · B2B-клиенты</div><h3>Поиск заказчиков рядом</h3><p>ИИ собирает производства, ремонтные службы, склады и&nbsp;стройки в&nbsp;радиусе 30–50&nbsp;км и&nbsp;пишет каждому личное письмо: ремонт узлов и&nbsp;детали по&nbsp;образцу или чертежу — быстрее и&nbsp;дешевле, чем покупать новое. Первыми — твоим прежним заказчикам с&nbsp;отложенными проектами.</p></div>
+    <div class="card"><div class="n">Способ 2 · тендеры</div><h3>Закупки каждое утро</h3><p>ИИ просматривает открытые закупки и&nbsp;B2B-площадки — например, Портал поставщиков Москвы — по&nbsp;твоим словам: токарные и&nbsp;фрезерные работы, сварка, металлоконструкции, детали по&nbsp;чертежу. Присылает 3–5 подходящих с&nbsp;черновиком заявки.</p></div>
+    <div class="card"><div class="n">Способ 3 · лидогенерация</div><h3>Заявки с&nbsp;Авито и&nbsp;карт</h3><p>Объявления на&nbsp;Авито и&nbsp;в&nbsp;Яндекс Услугах, карточки в&nbsp;Яндекс Картах и&nbsp;2ГИС, короткие видео станков в&nbsp;работе. А&nbsp;вместо «просверлить дырку» — 3–5 готовых изделий с&nbsp;понятной ценой: навесы, ворота, кронштейны, мангалы.</p></div>
+    <div class="card"><div class="n">Способ 4 · сайт и бот</div><h3>Ни одной потерянной заявки</h3><p>Сайт с&nbsp;примерами работ и&nbsp;ИИ-бот, который за&nbsp;минуту отвечает на&nbsp;сайте, в&nbsp;Telegram и&nbsp;WhatsApp — днём, ночью и&nbsp;в&nbsp;выходные. Уточняет чертёж или фото, материал, количество и&nbsp;сроки и&nbsp;передаёт тебе готовую заявку.</p></div>
+    <div class="card"><div class="n">Способ 5 · расчёт</div><h3>КП за&nbsp;5&nbsp;минут</h3><p>По фото, чертежу или описанию ИИ собирает коммерческое предложение по&nbsp;твоим ставкам: станко-час, материал, сроки, условия. Ты проверяешь и&nbsp;отправляешь, пока другие ещё считают.</p></div>
+  </div>
+  <div class="note"><b>Честно.</b> Денег у&nbsp;заказчиков ИИ не&nbsp;напечатает, и&nbsp;гарантий тут нет. Он помогает ответить первым, посчитать быстрее и&nbsp;найти спрос, которого сейчас не&nbsp;видно. Если по&nbsp;твоим ответам выйдет, что рынок стоит намертво, скажу прямо и&nbsp;покажу, куда можно переключиться.</div>
+</section>
+
+<section id="sam" class="reveal">
+  <div class="label">Попробуй сам · 2 минуты</div>
+  <h2>Первое письмо заказчику — с&nbsp;ИИ</h2>
+  <p>Бесплатно и&nbsp;работает в&nbsp;России: DeepSeek или Алиса. Скопируй текст, впиши своё — получишь черновик письма прежнему заказчику.</p>
+  <div class="prompt" id="prompt">Ты — менеджер по продажам металлообработки в Москве.
+Напиши короткое письмо главному механику завода, с которым мы раньше работали.
+Что мы делаем: __ (токарные, фрезерные, сварочные работы).
+Предложение: ремонт узлов и детали по образцу или чертежу — быстрее и дешевле, чем покупать новое. Срок: __ дней.
+Тон деловой и уважительный, 5–7 предложений. В конце попроси прислать фото или чертёж детали.<button class="ghost" id="copy" type="button">Копировать</button></div>
+  <p class="small" style="margin-top:10px">ИИ — помощник: перед отправкой проверь цифры и&nbsp;факты.</p>
+</section>
+
+<section id="voprosy" class="reveal">
+  <div class="label">5 вопросов к тебе</div>
+  <h2>Ответь — и&nbsp;я скажу, что сработает у&nbsp;тебя</h2>
+  <ol class="sw">
+    <li><b>Что делаете.</b> Токарка, фрезеровка, сварка, резка, гибка? Какие станки, есть ли ЧПУ, какой максимальный размер детали?</li>
+    <li><b>Кто заказывал.</b> Кто были лучшие заказчики до&nbsp;спада: какие отрасли, какой обычно заказ?</li>
+    <li><b>Откуда шли заказы.</b> Знакомые, сайт, Авито, тендеры, реклама?</li>
+    <li><b>Что уже есть.</b> Сайт, Авито, карточка в&nbsp;Яндекс Картах или 2ГИС, фото и&nbsp;видео работ?</li>
+    <li><b>Что готов брать сейчас.</b> От&nbsp;какого объёма и&nbsp;в&nbsp;какие сроки?</li>
+  </ol>
+  <div class="min">
+    <div class="label">Удобнее голосом</div>
+    <p>Можно голосовыми, по&nbsp;одному вопросу, когда удобно.</p>
+    <a class="btn wide" href="https://t.me/maximlagoshin" target="_blank" rel="noopener">Ответить в&nbsp;Telegram</a>
+  </div>
+</section>
+
+<section id="dolg" class="reveal">
+  <div class="label">Твои вопросы по долгу</div>
+  <h2>Как вернуть деньги законно</h2>
+  <p>Про деньги, которые тебе не&nbsp;вернули. Законный путь — три шага:</p>
+  <ol class="path">
+    <li><b>Претензия</b><span>Письменное требование вернуть деньги в&nbsp;срок. Текст подготовлю; отправим так, чтобы факт отправки был подтверждён.</span></li>
+    <li><b>Судебный приказ или иск</b><span>Если долг подтверждён письменно (расписка, договор) и&nbsp;сумма не&nbsp;больше 500&nbsp;000&nbsp;₽ — заявление на&nbsp;судебный приказ: быстрее, без заседания. Если расписки нет, но есть переписка и&nbsp;свидетели, или приказ отменят — иск.</span></li>
+    <li><b>Исполнительный документ</b><span>Судебный приказ или решение суда — основание для взыскания со&nbsp;счетов и&nbsp;имущества должника.</span></li>
+  </ol>
+  <div class="note warn"><b>Срочно: срок — три года.</b> Общий срок исковой давности — три года (ст.&nbsp;196&nbsp;ГК&nbsp;РФ). Если деньги брали на&nbsp;определённый срок, отсчёт идёт с&nbsp;его окончания (ст.&nbsp;200&nbsp;ГК&nbsp;РФ). Если она признавала долг — например, письменно обещала вернуть, — срок может прерваться и&nbsp;начаться заново (ст.&nbsp;203&nbsp;ГК&nbsp;РФ). Поэтому важны даты её сообщений.</div>
+  <h3>Что прислать</h3>
+  <ul class="check">
+    <li>Сумму, дату и&nbsp;как передавались деньги — и&nbsp;на&nbsp;какой срок она брала.</li>
+    <li>Расписку, договор или переводы — если есть хоть что-то.</li>
+    <li>Всю переписку с&nbsp;ней: скриншоты с&nbsp;датами — где просит, где обещает вернуть, и&nbsp;самое последнее сообщение.</li>
+    <li>Кто передавал деньги и&nbsp;может это подтвердить.</li>
+    <li>Её ФИО, дату рождения, если знаешь, и&nbsp;где она живёт сейчас: город, последний адрес в&nbsp;России.</li>
+  </ul>
+  <p class="small" style="margin-top:12px">Я не&nbsp;юрист и&nbsp;не&nbsp;даю юридических консультаций: подготовлю претензию и&nbsp;документы, при необходимости подключим юриста. Решение, идти ли в&nbsp;суд, — за&nbsp;тобой.</p>
+  <div class="min">
+    <div class="label">Можно частями</div>
+    <p>Пришли всё в&nbsp;Telegram — скриншоты, фото, голосовые.</p>
+    <a class="btn wide" href="https://t.me/maximlagoshin" target="_blank" rel="noopener">Отправить в&nbsp;Telegram</a>
+  </div>
+</section>
+
+<section class="reveal" id="partner">
+  <div class="label">Партнёрство · без вложений и обязательств</div>
+  <h2>Знаешь бизнесменов, которым нужны клиенты?</h2>
+  <p>Ты спросил, есть ли у&nbsp;тебя передо мной обязательства. Нет: ноль вложений и&nbsp;ноль обязательств. Ты знакомишь, всю работу делаю я, ты получаешь долю с&nbsp;каждой оплаты.</p>
+  <p class="muted">Заказы сейчас ищут многие — в&nbsp;том числе твои коллеги по&nbsp;металлу. Поиск клиентов, сайт, бот, видео — это им.</p>
+  <div class="rates">
+    <div class="rate"><div class="big">10%</div><h3>Сайты, ИИ-боты и&nbsp;автоматизация для бизнеса</h3><ul><li>Спринт 29&nbsp;000&nbsp;₽ → <b>2&nbsp;900&nbsp;₽</b> тебе</li><li>Сайт + ИИ-ассистент 80&nbsp;000&nbsp;₽ → <b>8&nbsp;000&nbsp;₽</b></li></ul></div>
+    <div class="rate"><div class="big">20%</div><h3>Книги, курсы, сессии</h3><ul><li>Курс 1&nbsp;690&nbsp;₽ → <b>338&nbsp;₽</b> тебе</li><li>ИИ-сессия 7&nbsp;500&nbsp;₽ → <b>1&nbsp;500&nbsp;₽</b></li></ul></div>
+  </div>
+  <h3>Как познакомить</h3>
+  <ol class="steps">
+    <li>Перешли человеку мой Telegram — <a href="https://t.me/maximlagoshin" target="_blank" rel="noopener">@maximlagoshin</a>. Если речь о&nbsp;теле — <a href="https://createparadise.now/ru/10min-body.html" target="_blank" rel="noopener">страницу курса</a>.</li>
+    <li>Пусть напишет: «я от Сидора». Захочешь — заведу личную ссылку и&nbsp;промокод для друзей (−10%).</li>
+    <li>Каждая оплата фиксируется за&nbsp;тобой: продукт, сумма, твоя доля — отчёт по&nbsp;каждой продаже.</li>
+  </ol>
+  <div class="note"><b>Выплаты — только официально.</b> Только на&nbsp;твоё имя; конкретный способ согласуем при первой сделке. Никаких чужих карт, посредников и&nbsp;обходных схем. Доход зависит от&nbsp;рекомендаций, гарантий нет.</div>
+</section>
+
+<section id="telo" class="reveal">
+  <div class="label">Второй слой · тело</div>
+  <h2>«До тела мы с&nbsp;тобой ещё доберёмся»</h2>
+  <p>Договорились. Когда захочешь, вот День&nbsp;1 из&nbsp;моей книги «Идеальное тело за&nbsp;10&nbsp;минут в&nbsp;день»: одна сессия 9:30 — без зала, снаряжения и&nbsp;покупок.</p>
   <ol class="tl">
     <li><time>0:00</time><div><b>Разминка · 1:00</b><span>Пого-прыжки, касания коленей, приседания, круги бёдрами и плечами. В конце — бой с тенью.</span></div></li>
     <li><time>1:00</time><div><b>Раунд 1 · 2:30 — пресс</b><span>V-скручивания на кровати.</span></div></li>
     <li><time>3:30</time><div><b>Раунд 2 · 2:30 — руки</b><span>Обратные отжимания от края кровати. Есть турник — подтягивания.</span></div></li>
     <li><time>6:00</time><div><b>Раунд 3 · 2:30 — ноги</b><span>Выпады назад, 10–15 на одну сторону, потом на другую.</span></div></li>
     <li><time>8:30</time><div><b>Растяжка · 1:00</b><span>Грудь у стены, бока, задняя поверхность бедра, таз на диване.</span></div></li>
-    <li><time>9:30</time><div><b>Готово</b><span>Душ. Вы выходите острее, чем зашли.</span></div></li>
+    <li><time>9:30</time><div><b>Готово</b><span>Душ. Ты выходишь острее, чем зашёл.</span></div></li>
   </ol>
   <figure>
     <img src="rounds.webp" width="1400" height="441" alt="Три раунда по 2:30: пресс, подтягивания и выпады назад; полная амплитуда, быстро но мягко, глубокое дыхание" loading="lazy" decoding="async">
@@ -146,7 +294,7 @@ footer{padding:26px 0 48px;border-top:1px solid var(--line);font-size:13.5px;col
     <div class="row">
       <div>
         <div class="label">Таймер 9:30 · прямо здесь</div>
-        <div class="t-phase" id="tPhase">Готовы? Нажмите «Старт»</div>
+        <div class="t-phase" id="tPhase">Готов? Жми «Старт»</div>
         <div class="t-next" id="tNext">Дальше: разминка 1:00</div>
       </div>
     </div>
@@ -158,72 +306,27 @@ footer{padding:26px 0 48px;border-top:1px solid var(--line);font-size:13.5px;col
       <button class="ghost" id="tReset" type="button">Сброс</button>
     </div>
   </div>
-</section>
 
-<section class="reveal">
-  <div class="label">Как делать</div>
-  <h2>Три упражнения на сегодня</h2>
-  <div class="cards">
-    <div class="card"><div class="n">Раунд 1 · пресс</div><h3>V-скручивания на кровати</h3><p>Лягте на край кровати так, чтобы ноги могли уходить ниже матраса. Подушку — в руки и за голову. На выдохе складывайтесь: прямые ноги и корпус навстречу друг другу, коснитесь подушкой стоп и плавно вернитесь. Вторую подушку — под затылок, чтобы шея не проваливалась.</p></div>
-    <div class="card"><div class="n">Раунд 2 · руки</div><h3>Обратные отжимания от края кровати</h3><p>Сядьте спиной к кровати, ладони на край, пальцы вперёд, ноги перед собой. Опускайте таз вертикально вниз, спина близко к опоре, локти уходят строго назад. На выдохе — вверх. Чем ближе стопы, тем легче.</p></div>
-    <div class="card"><div class="n">Раунд 3 · ноги</div><h3>Выпады назад</h3><p>Широкий шаг назад и плавно вниз, свободная ладонь на колено передней ноги для устойчивости. Мощно вверх передней ногой — и сразу следующий шаг. 10–15 повторов на одну сторону, потом смена, до сигнала. Захотите сложнее — бутылку воды в руку.</p></div>
-  </div>
-</section>
-
-<section class="reveal">
-  <div class="label">Пять переключателей</div>
-  <h2>Важно не что, а как</h2>
-  <ol class="sw">
-    <li><b>Безразличие на старте.</b> Настроение не требуется. Каменное лицо, таймер, поехали.</li>
-    <li><b>Владейте окном.</b> Не считайте повторы и не смотрите на часы — каждая секунда раунда превращается в движение.</li>
-    <li><b>5-секундный сброс.</b> Когда жжёт: 2–3 глубоких вдоха животом — и сразу обратно.</li>
-    <li><b>Улыбка под нагрузкой.</b> На пике усилия покажите зубы: мозг считывает «это игра, а не авария».</li>
-    <li><b>Вода вместо телефона.</b> Между раундами — максимум минута и холодная вода на лицо и шею. Не телефон.</li>
-  </ol>
-  <div class="note"><b>Бонус · 60 секунд.</b> После следующего фрукта в течение 5–15 минут сделайте 30 приседаний или 60 подъёмов на носки: работающие мышцы сами заберут сахар, без скачка и провала.</div>
-  <p class="muted">Дальше всё держится на ритме: цель — 30 сессий в месяц. Пропустили день — завтра две. Не больше трёх дней без движения.</p>
-  <div class="note"><b>Темп и амплитуда — ваши.</b> Если есть вопросы по давлению, сердцу, спине или суставам — сначала согласуйте нагрузку с врачом. Острая боль — сразу стоп.</div>
-  <div class="min">
-    <div class="label">Минимум на сегодня</div>
-    <p>Одна сессия 9:30. Сделали — напишите мне одно слово: «сделал».</p>
-    <a class="btn wide" href="https://t.me/maximlagoshin" target="_blank" rel="noopener">Написать «сделал» в Telegram</a>
-  </div>
-</section>
-
-<section class="reveal">
-  <div class="label">ИИ в гуманных целях</div>
-  <h2>Пусть ИИ подстроит этот день под вас</h2>
-  <p>Бесплатно и легально работает из России: GigaChat, YandexGPT (Алиса) или DeepSeek. Скопируйте текст, впишите свои данные — и получите план под своё тело.</p>
-  <div class="prompt" id="prompt">Ты мой тренер по протоколу «9:30»: 1 минута разминки, 3 раунда по 2:30 (пресс, отжимания от края кровати, выпады назад), 1 минута растяжки.
-Мне __ лет, рост __, вес __. Ограничения по здоровью: __.
-Подстрой упражнения и темп под меня — коротко, по шагам.
-Если что-то из этого может быть мне опасно, прямо скажи, к какому врачу сходить.<button class="ghost" id="copy" type="button">Копировать</button></div>
-  <p class="small" style="margin-top:10px">ИИ — помощник, не врач. Хороший способ сделать заботу о себе и о близких проще: так же можно собрать план для родителей или друга.</p>
-</section>
-
-<section class="reveal" id="partner">
-  <div class="label">Партнёрство · без вложений</div>
-  <h2>Кому из ваших знакомых это нужно?</h2>
-  <p>Если кому-то нужно то же самое — тело за 10 минут, ИИ-помощник или сайт для бизнеса, — просто познакомьте нас. Всю работу делаю я, вы получаете долю с каждой оплаты.</p>
-  <div class="rates">
-    <div class="rate"><div class="big">20%</div><h3>Книги, курсы, сессии</h3><ul><li>Курс 1&nbsp;690&nbsp;₽ → <b>338&nbsp;₽</b> вам</li><li>ИИ-сессия 7&nbsp;500&nbsp;₽ → <b>1&nbsp;500&nbsp;₽</b></li></ul></div>
-    <div class="rate"><div class="big">10%</div><h3>Сайты и ИИ-боты для бизнеса</h3><ul><li>Спринт 29&nbsp;000&nbsp;₽ → <b>2&nbsp;900&nbsp;₽</b> вам</li><li>Сайт + ИИ-ассистент 80&nbsp;000&nbsp;₽ → <b>8&nbsp;000&nbsp;₽</b></li></ul></div>
-  </div>
-  <h3>Как поделиться</h3>
-  <ol class="steps">
-    <li>Отправьте человеку <a href="https://createparadise.now/ru/10min-body.html" target="_blank" rel="noopener">страницу курса</a> или мой Telegram — <a href="https://t.me/maximlagoshin" target="_blank" rel="noopener">@maximlagoshin</a>.</li>
-    <li>Пусть напишет: «я от Сидора». Хотите личную ссылку и промокод для друзей (−10%) — сделаю за пару минут.</li>
-    <li>Каждая оплата фиксируется за вами: продукт, сумма, ваша доля — отчёт по каждой продаже.</li>
-  </ol>
-  <div class="note"><b>Выплаты — честно и официально.</b> По запросу, только на ваше имя: на ваш счёт или карту (СБП). Никаких чужих карт и посредников. Налоги с дохода — по закону вашей страны. Доход зависит от рекомендаций, гарантий нет.</div>
+  <details>
+    <summary>Как делать три упражнения</summary>
+    <div class="inner">
+      <div class="cards">
+        <div class="card"><div class="n">Раунд 1 · пресс</div><h3>V-скручивания на кровати</h3><p>Ляг на край кровати так, чтобы ноги могли уходить ниже матраса. Подушку — в руки и за голову. На выдохе складывайся: прямые ноги и корпус навстречу друг другу, коснись подушкой стоп и плавно вернись. Вторую подушку — под затылок, чтобы шея не проваливалась.</p></div>
+        <div class="card"><div class="n">Раунд 2 · руки</div><h3>Обратные отжимания от края кровати</h3><p>Сядь спиной к кровати, ладони на край, пальцы вперёд, ноги перед собой. Опускай таз вертикально вниз, спина близко к опоре, локти уходят строго назад. На выдохе — вверх. Чем ближе стопы, тем легче.</p></div>
+        <div class="card"><div class="n">Раунд 3 · ноги</div><h3>Выпады назад</h3><p>Широкий шаг назад и плавно вниз, свободная ладонь на колено передней ноги для устойчивости. Мощно вверх передней ногой — и сразу следующий шаг. 10–15 повторов на одну сторону, потом смена, до сигнала. Захочешь сложнее — бутылку воды в руку.</p></div>
+      </div>
+    </div>
+  </details>
+  <div class="note"><b>Темп и амплитуда — твои.</b> Если есть вопросы по давлению, сердцу, спине или суставам — сначала согласуй нагрузку с врачом. Острая боль — сразу стоп.</div>
+  <p class="muted">Сделал — напиши мне одно слово: «сделал».</p>
 </section>
 
 <section class="cta reveal">
   <a class="btn primary" href="https://t.me/maximlagoshin" target="_blank" rel="noopener">Написать Максиму в Telegram</a>
-  <p class="small" style="text-align:center;margin-top:12px">Вопрос по упражнениям, по ИИ или по партнёрству — отвечу лично.</p>
+  <p class="small" style="text-align:center;margin-top:12px">Ответы, документы, знакомства — пиши сюда, можно голосом.</p>
 </section>
 
-<footer>Максим Лагошин · Create Paradise Now · Страница сделана лично для вас и не индексируется поисковиками.</footer>
+<footer>Максим Лагошин · Create Paradise Now · Страница сделана лично для тебя и не индексируется поисковиками.</footer>
 </main>
 
 <script>
@@ -274,8 +377,8 @@ footer{padding:26px 0 48px;border-top:1px solid var(--line);font-size:13.5px;col
   function render(){
     var e=Math.min(elapsed(),TOTAL), w=where(e);
     if(w.i>=P.length){
-      elPhase.textContent='Готово! Душ — и напишите мне «сделал».';
-      elNext.textContent='Вы выходите острее, чем зашли.';
+      elPhase.textContent='Готово! Душ — и напиши мне «сделал».';
+      elNext.textContent='Ты выходишь острее, чем зашёл.';
       elClock.textContent='0:00'; elBar.style.width='100%';
       elTotal.textContent='Всего 9:30 из 9:30';
       if(running){running=false;acc=TOTAL;phaseBeep();wake(false);bStart.textContent='▶ Ещё раз';}
@@ -305,7 +408,7 @@ footer{padding:26px 0 48px;border-top:1px solid var(--line);font-size:13.5px;col
   });
   bReset.addEventListener('click',function(){
     tap(); running=false; clearTimeout(raf); acc=0; lastIdx=-1; lastSec=-1; wake(false);
-    bStart.textContent='▶ Старт'; elPhase.textContent='Готовы? Нажмите «Старт»'; elNext.textContent='Дальше: разминка 1:00';
+    bStart.textContent='▶ Старт'; elPhase.textContent='Готов? Жми «Старт»'; elNext.textContent='Дальше: разминка 1:00';
     elClock.textContent='9:30'; elBar.style.width='0'; elTotal.textContent='Всего 0:00 из 9:30 · сигнал на смене этапа';
   });
   document.addEventListener('visibilitychange',function(){ if(!document.hidden&&running){ if(!lock)wake(true); render(); } });
